@@ -1,5 +1,5 @@
 # compile, link and test - scala cli only...
-default: scalaJsCli serve
+default: scalaJsCli test
 
 # JVM tests - compile, link and serve
 manuallyInspect: scalaJsCli serve

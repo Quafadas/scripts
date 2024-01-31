@@ -34,6 +34,4 @@ Nits
 
 - Two seperate scala-cli projects, is _slightly_ more complex than I wanted.
 
-- `DriverJar.java` is a java file, that I can't scope to test, which means this would ship with a dependance on playwright... not cool, TODO.
-
 - Need to land https://github.com/VirtusLab/scala-cli/issues/2698 as the scalaJsCli just task is currently rather complex! Much better managed in scala-cli.

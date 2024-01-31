@@ -1,5 +1,6 @@
 {
   "imports": {
-    "@stdlib/linspace": "https://cdn.jsdelivr.net/gh/stdlib-js/array-base-linspace@esm/index.mjs"
+    "@stdlib/linspace": "https://cdn.jsdelivr.net/gh/stdlib-js/array-base-linspace@esm/index.mjs",
+    "@stdlib/blas": "https://cdn.jsdelivr.net/gh/stdlib-js/blas@esm/index.mjs"
   }
 }
