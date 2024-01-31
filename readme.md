@@ -15,11 +15,14 @@ I needed a way to manage heterogenous scala-cli scripts and settled on just.
 
 `just --list` to see the available commands.
 
-`just` is the demo... it;
+`just inspectManually` to see the "application". It'll take a second on browser load to resolve the ESM imports.
+
+`just` (the default) is the `demo` as such... it;
 - Builds the facade in scala-js-cli (with our import map linking trick)
-- Fires up playwright
-- Fires up a JDK 18+ `SimpleHttpServer`
-- Tests that the browser responds as expected to input events
+- Runs the tests
+  - Fires up playwright
+  - Fires up a JDK 18+ `SimpleHttpServer`
+  - Tests that the browser responds as expected to input events
 
 ## Goals
 
