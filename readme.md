@@ -34,7 +34,7 @@ In browser tests driven purely by the JVM API of [playwright](https://playwright
 
 ## Structure
 
-- /facade is the scalajs project that one would seek to publish. In this case, it contains a very simple facade for @stdlib/linspace.
+- /facade is the scalajs project that one would seek to publish. In this case, it contains a very simple facade for @stdlib/linspace. This project, would be publishable. It should be useable upstream, as long as the dependancies in the importmap.json are resolved through either ESModule or a bundler.
 
 - /testDir contains a traditional scala-cli (JVM) project which is nothing more than a test harness for the facade.
 
