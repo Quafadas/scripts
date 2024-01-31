@@ -1,3 +1,4 @@
+Test scala facade in browser, sans vite, sans sbt, mit scala-cli.
 
 # Dependancies
 
@@ -5,8 +6,8 @@ You'll need
 
 - https://github.com/casey/just
 - [scala js cli 1.15.0.1](https://github.com/VirtusLab/scala-js-cli/releases/tag/v1.15.0.1)
-    - In this directory
-    - chmod +x scala-js-cli
+    - Download to this working directory
+    - `chmod +x scala-js-cli`
 
 # Justfile
 
@@ -14,7 +15,11 @@ I needed a way to manage heterogenous scala-cli scripts and settled on just.
 
 `just --list` to see the available commands.
 
-`just` is the demo...
+`just` is the demo... it;
+- Builds the facade in scala-js-cli (with our import map linking trick)
+- Fires up playwright
+- Fires up a JDK 18+ `SimpleHttpServer`
+- Tests that the browser responds as expected to input events
 
 ## Goals
 
@@ -32,6 +37,6 @@ In browser tests driven purely by the JVM API of [playwright](https://playwright
 
 Nits
 
-- Two seperate scala-cli projects, is _slightly_ more complex than I wanted.
+- Two seperate scala-cli projects, is _slightly_ more complex than I wanted. I don't think they can be mixed though, as it would require seperate dependancies per platform.
 
-- Need to land https://github.com/VirtusLab/scala-cli/issues/2698 as the scalaJsCli just task is currently rather complex! Much better managed in scala-cli.
+- Need to land https://github.com/VirtusLab/scala-cli/issues/2698 as the scalaJsCli just task is currently rather complex!
