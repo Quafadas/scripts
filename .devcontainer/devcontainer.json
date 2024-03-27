@@ -6,7 +6,7 @@
   "image": "mcr.microsoft.com/devcontainers/base:jammy",
   "customizations": {
     "vscode": {
-      "extensions": ["scalameta.metals", "usernamehw.errorlens"]
+      "extensions": ["scalameta.metals", "usernamehw.errorlens", "ms-vsliveshare.vsliveshare", "mechatroner.rainbow-csv", "skellock.just", "github.copilot"]
     }
   },
 
@@ -15,8 +15,10 @@
     "ghcr.io/devcontainers/features/java:1": {
       "version": 21
     },
+    "ghcr.io/devcontainers-contrib/features/sbt-sdkman:2": {"version": "1.9.9"},
     "ghcr.io/devcontainers/features/node:1": {},
-    "ghcr.io/devcontainers-contrib/features/scalacli-sdkman:2": {}
+    "ghcr.io/devcontainers-contrib/features/scalacli-sdkman:2": {},
+    "ghcr.io/guiyomh/features/just:0" :{}
   },
 
   // Use 'forwardPorts' to make a list of ports inside the container available locally.

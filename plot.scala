@@ -4,8 +4,11 @@ import viz.PlotTargets.publishToPort
 
 @main def run =
   given i: Int = 8085
-  case class BarData(amount: Double, category: String)
-  case class PieData(field: Double, id: String)
+
+
+  // write a csv reader with these headers name,mfr,type,calories,protein,fat,sodium,fiber,carbo,sugars,potass,vitamins,shelf,weight,cups,rating
+  
+
 
   val r = new scala.util.Random(42)
 
