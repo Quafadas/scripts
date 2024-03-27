@@ -4,34 +4,14 @@ import viz.PlotTargets.publishToPort
 import viz.vega.plots.*
 
 @main def run =
-  given i: Int = 8086
-  
+  given i: Int = 8086 // port to plot on
 
   case class FromFilePlot(path: os.Path, override val mods: Seq[ujson.Value => Unit] = List()) extends WithBaseSpec(mods)  :
     override lazy val baseSpec: ujson.Value = ujson.read(os.read(path))
 
-
-  case class Cereal(
-      name: String,
-      mfr: String,
-      `type`: String,
-      calories: Int,
-      protein: Int,
-      fat: Int,
-      sodium: Int,
-      fiber: Double,
-      carbo: Double,
-      sugars: Int,
-      potass: Int,
-      vitamins: Int,
-      shelf: Int,
-      weight: Double,
-      cups: Double,
-      rating: Double
-  )
-
   val lines = os.read.lines(os.pwd / "cereal.csv")
 
+  val s = "s"
 
   val cereals = lines.tail.map { line =>
     val cols = line.split(",")
@@ -55,11 +35,12 @@ import viz.vega.plots.*
     )
   }
 
-  // http://localhost:8085/view/sodium
+  
   val sodium = cereals.map(c => ujson.Obj("u" -> c.sodium)) 
   val fiber = cereals.map(c => ujson.Obj("u" -> c.fiber)) 
   val fiberSignals = ujson.read(os.read(os.pwd / "histogram.signals.json"))
 
+// http://localhost:8085/view/sodium
   FromFilePlot(
     os.pwd / "histogram.vg.json",    
     List(
@@ -70,7 +51,7 @@ import viz.vega.plots.*
     )
   )
   
-
+// http://localhost:8085/view/fiber
   FromFilePlot(
     os.pwd / "histogram.vg.json",    
     List(      

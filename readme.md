@@ -1,7 +1,7 @@
 An experiment in tooling
 
 - Do we get IDE support in codespaces
-- can we start codespaces
+- can we configure codespaces for easy use
 - can we plot in codespaces
 
 # Notes
@@ -25,5 +25,5 @@ http://localhost:8086/view/sodium
 Then 
 
 ```
-just runW
+just run
 ```
