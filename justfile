@@ -6,12 +6,16 @@ setup:
 run:
   scala-cli run .
 
+
+runW:
+  scala-cli run . -w
+
 serveViz:
-  ./cs launch io.github.quafadas:dedav4s_3:0.9.0 -M viz.websockets.serve -- 8085
+  ./cs launch io.github.quafadas:dedav4s_3:0.9.0 -M viz.websockets.serve -- 8086
 
 startVizServer:
   echo starting server at http://localhost:8085
-  ./cs launch io.github.quafadas:dedav4s_3:0.9.0 -M viz.websockets.serve -- 8085
+  ./cs launch io.github.quafadas:dedav4s_3:0.9.0 -M viz.websockets.serve -- 8086
 
 installCoursier:
   curl -fL "https://github.com/coursier/launchers/raw/master/cs-x86_64-pc-linux.gz" | gzip -d > cs

@@ -1,0 +1,21 @@
+[
+  {
+    "name": "binOffset",
+    "value": 0,
+    "bind": {
+      "input": "range",
+      "min": -0.1,
+      "max": 0.1
+    }
+  },
+  {
+    "name": "binStep",
+    "value": 1,
+    "bind": {
+      "input": "range",
+      "min": 0,
+      "max": 2,
+      "step": 1
+    }
+  }
+]
